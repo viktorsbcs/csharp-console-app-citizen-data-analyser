@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>declared_persons_analyser</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Models\mfp3lkxc.2yi~" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.7.82" />
+    <PackageReference Include="ConsoleTables" Version="2.4.1" />
+    <PackageReference Include="Microsoft.OData.Client" Version="7.6.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+</Project>
