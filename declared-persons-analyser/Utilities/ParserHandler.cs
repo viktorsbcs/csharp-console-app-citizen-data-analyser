@@ -25,7 +25,6 @@ namespace declared_persons_analyser.Utilities
             return this.args;
         }
 
-        //CommandLine Parser bibliotēka funkcionē pareizi, kad lietotāja parametriem ir priekša divas --
         private string[] PrepareArgsForParsing(string[] args)
         {
             for (int i = 0; i < args.Length; i++)
