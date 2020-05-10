@@ -1,4 +1,5 @@
 ﻿using CommandLine;
+using declared_persons_analyser.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,6 +9,7 @@ namespace declared_persons_analyser.Models
 {
     public class Options
     {
+
         [Option("district", Required = true)]
         public int District { get; set; }
 
@@ -23,7 +25,9 @@ namespace declared_persons_analyser.Models
         [Option("out")]
         public string Out { get; set; }
 
-        [Option("source", Default = "https://www.epakalpojumi.lv/odata/service/DeclaredPersons")]
+        
+
+        [Option("source", Default = GlobalDefaults.DEFAULT_URL)]
         public string Source { get; set; }
 
         [Option("month")]
