@@ -22,21 +22,13 @@ namespace declared_persons_analyser
             WebServices webServices = new WebServices();
             DataServices dataServices = new DataServices();
             OutputServices outputServices = new OutputServices();
-
             Options userInputData = argsParser.ParseArgs(args);
-
             string url = webServices.GenerateUrlFromDistrictId(userInputData.District, userInputData.Source);
-
             List<Value> response = webServices.FetchData(url);
-
             List<Value> filteredData = dataServices.FilterData(userInputData, response);
-
             DataOutput outputData = outputServices.PrepareDataForOutput(filteredData);
-
             string jsonString = outputServices.GenerateJsonString(outputData);
-
             outputServices.PrintDataToConsole(outputData);
-
             outputServices.SaveJsonToFile(userInputData.Out, jsonString);
 
 
